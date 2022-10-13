@@ -3,7 +3,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import axios from "axios"
 import Card from './src/components/card'
-import MiniCard from "./src/components/mini-card";
 
 export default function App() {
   const [temperatura, setTemperatura] = useState(0)
@@ -44,15 +43,6 @@ export default function App() {
         condicao = { condicao }
         condicaoDesc = { condicaoDesc }
       />
-      {/*
-      <MiniCard style={styles.miniCard}
-              data = { diaUm.date }
-              temperaturaMinima = { diaUm.min }
-              temperaturaMaxima = { diaUm.max }
-              condicaoDesc = { diaUm.description }
-         />
-      
-    */} 
     </View>
   )
 }
