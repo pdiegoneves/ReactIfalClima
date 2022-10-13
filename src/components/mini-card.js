@@ -9,7 +9,6 @@ export default function(props) {
         <View style={styles.card}>
             <Text style={styles.title}>{ props.data }</Text>
             <Text>🔻{ props.temperaturaMinima }° 🔺{ props.temperaturaMaxima }°</Text>
-            <Text style={styles.condicao}>{ verificarCondicao(props.condicao)} </Text>
             <Text>{ props.condicaoDesc }</Text>
         </View>
     )
