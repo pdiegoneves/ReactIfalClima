@@ -9,6 +9,10 @@ export default function App() {
   const [temperaturaMinima, setTemperaturaMinima] = useState(0)
   const [temperaturaMaxima, setTemperaturaMaxima] = useState(0)
   const [cidade, setCidade] = useState('')
+  const [dataAtual, setDataAtual] = useState('')
+  const [horaAtual, setHoraAtual] = useState('')
+  const [condicao, setCondicao] = useState('')
+  const [condicaoDesc, setCondicaoDesc] = useState('')
 
 
   const baseURL = "https://api.hgbrasil.com/weather?woeid=455880"
@@ -16,10 +20,14 @@ export default function App() {
   const data = axios.get(baseURL)
   .then(res => {
       dados = {...res.data}
-      setCidade(dados.results.city_name)
+      setCidade(dados.results.city)
       setTemperatura(dados.results.temp)
+      setDataAtual(dados.results.date)
+      setHoraAtual(dados.results.time)
       setTemperaturaMinima(dados.results.forecast[0].min)
       setTemperaturaMaxima(dados.results.forecast[0].max)
+      setCondicao(dados.results.condition_code)
+      setCondicaoDesc(dados.results.forecast[0].description)
   })
 
 
@@ -29,8 +37,12 @@ export default function App() {
       <Card 
         cidade = { cidade }
         temperatura = { temperatura }
+        data = { dataAtual }
+        hora = { horaAtual }
         temperaturaMinima = { temperaturaMinima }
         temperaturaMaxima = { temperaturaMaxima }
+        condicao = { condicao }
+        condicaoDesc = { condicaoDesc }
       />
     </View>
   )

@@ -1,0 +1,60 @@
+function verificarCondicao(condition) {
+    console.log('verificar condiçao', condition)
+    if(condition === 28) return 28
+    switch(condition){
+        case '0 ': return "Tempestade forte"
+case '1 ': return "Tempestade tropical"
+case '2 ': return "Furacão  "
+case '3 ': return "Tempestades severas"
+case '4 ': return "Tempestades"
+case '5 ': return "Misto de neve e chuva"
+case '6 ': return "Misto chuva e gelo"
+case '7 ': return "Misto neve e gelo"
+case '8 ': return "Geada fina"
+case '9 ': return "Chuviscos"
+case '10': return "Congelamento chuva"
+case '11': return "Alguns chuviscos"
+case '12': return "Alguns chuviscos"
+case '13': return "Neve baixa"
+case '14': return "Tempestade com neve"
+case '15': return "Ventania com neve"
+case '16': return "Neve"
+case '17': return "Granizo"
+case '18': return "Gelo"
+case '19': return "Poeira"
+case '20': return "Neblina"
+case '21': return "Tempestade de areia"
+case '22': return "Fumacento"
+case '23': return "Vento acentuado"
+case '24': return "Ventania"
+case '25': return "Tempo frio"
+case '26': return "Tempo nublado"
+case '27': return "Tempo limpo"
+case '29': return "Parcialmente nublado"
+case '28': return "☁️"
+case '30': return "Parcialmente nublado"
+case '31': return "Tempo limpo"
+case '32': return "☀️"
+case '33': return "Estrelado"
+case '34': return "Ensolarado com muitas nuvens"
+case '35': return "Misto chuva e granizo"
+case '36': return "Ar quente"
+case '37': return "Tempestades isoladas"
+case '38': return "Trovoadas dispersas"
+case '39': return "Trovoadas dispersas"
+case '40': return "Chuvas esparsas"
+case '41': return "Pesados neve"
+case '42': return "Chuviscos com neve"
+case '43': return "Neve pesada"
+case '44': return "Sol com poucas nuvens"
+case '45': return "Chuva"
+case '46': return "Queda de neve"
+case '47': return "Tempestades isoladas"
+case '48': return "Serviço não disponível"
+
+    }
+}
+
+
+
+export default verificarCondicao
