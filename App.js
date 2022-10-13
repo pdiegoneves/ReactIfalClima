@@ -6,6 +6,8 @@ import Card from './src/components/card'
 
 export default function App() {
   const [temperatura, setTemperatura] = useState(0)
+  const [temperaturaMinima, setTemperaturaMinima] = useState(0)
+  const [temperaturaMaxima, setTemperaturaMaxima] = useState(0)
   const [cidade, setCidade] = useState('')
 
 
@@ -16,6 +18,8 @@ export default function App() {
       dados = {...res.data}
       setCidade(dados.results.city_name)
       setTemperatura(dados.results.temp)
+      setTemperaturaMinima(dados.results.forecast[0].min)
+      setTemperaturaMaxima(dados.results.forecast[0].max)
   })
 
 
@@ -25,6 +29,8 @@ export default function App() {
       <Card 
         cidade = { cidade }
         temperatura = { temperatura }
+        temperaturaMinima = { temperaturaMinima }
+        temperaturaMaxima = { temperaturaMaxima }
       />
     </View>
   )

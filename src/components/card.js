@@ -8,7 +8,7 @@ export default function(props) {
     return (
         <View style={styles.card}>
             <Text>Tempo agora em {props.cidade}</Text>
-            <Text>{ props.temperatura }° </Text>
+            <Text>{ props.temperatura }° 🔻{ props.temperaturaMinima }° 🔺{ props.temperaturaMaxima }°</Text>
             <Text></Text>
         </View>
     )
