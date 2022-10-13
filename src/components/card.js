@@ -25,7 +25,9 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: 'rgba(255,255,255,0.3)',
         borderRadius: 20,
-        padding: 15
+        padding: 15,
+        width: '80%',
+        margin: '10%'
     },
     condicaoGroup: {
         display: 'flex',
